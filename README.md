@@ -20,7 +20,7 @@ each activity. It creates this data file by performing the following functions:
 
 1. Reads in the Samsung data measurement variables from the features.txt file
 and extracts only the names and numbers corresponding to the mean and standard 
-deviation meassurements.
+deviation measurements.
 
 2. Reads in the activity names from the activity_labels.txt file.
 
@@ -40,7 +40,7 @@ test table, and then merging the training table with the test table.
 
 6. Sorts the single data table from Step 5 above by Subject and Activity
 and uses this table to compute and store in a new table the mean of each 
-measaurement variable for each subject and each activity.
+measurement variable for each subject and each activity.
 
 7. Sets the column names in the new table from Step 6 above using the info
 obtained from Steps 1 and 2, and then writes the resulting table to a file
