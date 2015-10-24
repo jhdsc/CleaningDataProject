@@ -4,11 +4,13 @@
 
 This script can be run using the following command: source("run_analysis.R")
 
-The script requires the following files from the original Samsung data set to
-be located in the same directory as the run_analysis script:
-acitvity_labels.txt, features.txt,
-subject_test.txt, X_test.txt, y_test.txt,
-subject_train.txt, X_train.txt, and y_train.txt
+The script requires the original Samsung data set (UCI HAR Dataset folder) to 
+be located in your working directory, and uses the following files from 
+that folder:
+
+acitvity_labels.txt, features.txt,	
+test/subject_test.txt, test/X_test.txt, test/y_test.txt,	
+train/subject_train.txt, train/X_train.txt, and train/y_train.txt	
 
 The script will take several seconds to run due to the time required for
 reading in the data from the above files.

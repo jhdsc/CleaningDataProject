@@ -6,19 +6,19 @@
 # 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 # Read in the features list
-features <- read.table("./features.txt")
+features <- read.table("./UCI HAR Dataset/features.txt")
 # Extract the numbers corresponding to the mean and standard deviation mesaurements
 features_subset <- features[grep("mean|std",features[,2]),1]
 # Extract the names corresponding to the mean and standard deviation mesaurements
 features_subset_names <- features[grep("mean|std",features[,2]),2]
 
 # Read in the activity labels
-activity <- read.table("./activity_labels.txt")
+activity <- read.table("./UCI HAR Dataset/activity_labels.txt")
 
 # Read in the trainig data
-train_subject <- read.table("./subject_train.txt")
-train_activity <- read.table("./y_train.txt")
-train_data <- read.table("./X_train.txt")
+train_subject <- read.table("./UCI HAR Dataset/train/subject_train.txt")
+train_activity <- read.table("./UCI HAR Dataset/train/y_train.txt")
+train_data <- read.table("./UCI HAR Dataset/train/X_train.txt")
 # Extract only the mean and standard deviation training mesaurements
 train_subset <- train_data[,features_subset]
 # Label the columns in the training subset with the corresponding feature names
@@ -29,9 +29,9 @@ colnames(train_subject) <- "Subject"
 colnames(train_activity) <- "Activity"
 
 # Read in the test data
-test_subject <- read.table("./subject_test.txt")
-test_activity <- read.table("./y_test.txt")
-test_data <- read.table("./X_test.txt")
+test_subject <- read.table("./UCI HAR Dataset/test/subject_test.txt")
+test_activity <- read.table("./UCI HAR Dataset/test/y_test.txt")
+test_data <- read.table("./UCI HAR Dataset/test/X_test.txt")
 # Extract only the mean and standard deviation test mesaurements
 test_subset <- test_data[,features_subset]
 # Label the columns in the test subset with the corresponding feature names
